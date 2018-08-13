@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class weatherService{
-    private baseUrl : string ='https://jira.atlassian.com/rest/api/2/issueLink/11779';
+    private baseUrl : string ='https://jira.atlassian.com/rest/api/2/search?jql=project=JRAServer&maxResults=50';
     constructor(private _http :Http){}
     getService(){
         const header = new Headers({'Content-Type':'application/json'});

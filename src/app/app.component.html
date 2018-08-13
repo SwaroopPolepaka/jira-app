@@ -9,20 +9,13 @@
 <br/><br/>
 <table border="1" style="width:100%">
   <tr>
-      <th>ID</th>
-      <th>Self</th>
-      <th>Inward Issue</th>
-      <th>Outward Issue</th>
-      <th>Type</th>
+      <th>Issue ID</th>
+      <th>URL</th>
+      <th>Issue Key</th>
   </tr>
-  <tr *ngIf="goodData">
-     <td>{{goodData.id}}</td>  
-     <td>{{goodData.self}}</td>
-     <td>
-       {{goodData.inwardIssue.id}}
-     </td>
-     <td>{{goodData.outwardIssue.id}}</td>
-     <td>{{goodData.type.id}}</td>
-     
+  <tr *ngfor="let g of goodData.issues">
+      <td>{{g.id}}</td>
+      <td>{{g.self}}</td>
+      <td>{{g.key}}</td>
   </tr>
 </table>
